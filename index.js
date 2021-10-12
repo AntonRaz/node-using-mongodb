@@ -4,11 +4,10 @@ import mongoose from 'mongoose';
 
 const app = express();
 const PORT = 4000;
-var mongoDB = 'mongodb://localhost:27017/productsdb';
 
 //mongoose connection
 mongoose.Promise = global.Promise;
-mongoose.connect(mongoDB, {
+mongoose.connect('mongodb://localhost/productsdb', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
