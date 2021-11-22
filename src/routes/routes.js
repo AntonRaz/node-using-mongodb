@@ -16,9 +16,11 @@ const routes = (app) => {
     app.route('/products/:ProductID')
         // get a specific product with an ID
         .get(getProductWithID)
-        // update a specific product with an ID
-        .post(updateProduct)
-        // delete a specific product with an ID
+
+        // updating a specific product
+        .put(updateProduct)
+
+        // deleting a specific product
         .delete(deleteProduct);
 }
 
